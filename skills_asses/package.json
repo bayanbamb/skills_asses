@@ -1,5 +1,5 @@
 {
-  "name": "skills-asses",
+  "name": "skill-assess",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:skills_asses": "node dist/skills_asses/server/server.mjs"
+    "serve:ssr:skill_assess": "node dist/skill_assess/server/server.mjs",
+    "clone-repo": "git clone https://github.com/bayanbamb/TAHAKOM_SkillAssessment.git"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,10 @@
     "@angular/platform-server": "^18.0.0",
     "@angular/router": "^18.0.0",
     "@angular/ssr": "^18.0.6",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.3",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -30,6 +35,7 @@
     "@angular-devkit/build-angular": "^18.0.6",
     "@angular/cli": "^18.0.6",
     "@angular/compiler-cli": "^18.0.0",
+    "@angular/localize": "^18.0.0",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",

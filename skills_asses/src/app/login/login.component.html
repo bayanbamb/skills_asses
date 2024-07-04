@@ -1,0 +1,47 @@
+
+<div id="container">
+    <section class="container-fluid" id="left">
+        <div id="login">
+            <div id="title">
+                <h1>LOGIN</h1>
+                <p>
+                    Please enter your credintials
+                </p>
+            </div>
+            <div id ="errormsg"
+                *ngIf="submitted && (loginForm.controls.username.invalid || loginForm.controls.password.invalid)"
+                >
+                <div
+                *ngIf="loginForm.controls.username.errors?.['required']
+                || loginForm.controls.password.errors?.['required'] || loginForm.controls.password.errors?.['minlength']">
+                    Please enter a correct national ID/password
+                </div>
+                <div
+                *ngIf="loginForm.controls.username.errors?.['minlength'] || loginForm.controls.username.errors?.['maxlength']">
+                    Username should be 10 numbers.
+                </div>
+            </div> 
+            <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <label for="username">Username</label>
+                <input class="mb-3 custom-input form-control" id="username" type="text" formControlName="username" placeholder="Enter your username" [ngClass]="{'is-invalid': loginForm.controls.username.touched && loginForm.controls.username.invalid}">
+
+                <label for="password">Password</label>
+                <input class="mb-3 custom-input form-control" id="password" type="password" formControlName="password" placeholder="********">
+                
+                <small>
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="ms-2 form-check-label" for="rememberMe">Remember me</label>
+                <a href="#" id="forgotpassword" class="ms-5 float-end">Forgot password.</a>
+                </small>
+
+                <br><br> 
+                
+                <button class="col-12 mx-auto custom-input btn btn-primary border-0" type="submit">Sign in</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="container-fluid" id="right">
+        <img alt="TAHAKOM logo" src="assets/images/TahakomLogo.png">
+    </section>
+</div>
