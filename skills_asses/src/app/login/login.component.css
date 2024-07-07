@@ -43,15 +43,6 @@ p{
     box-shadow: 0px .3px .3px 0px #00000040;
 }
 
-.btn-primary {
-    background-color: #612550;
-    box-shadow: 0px 4px 10px 0px #E9444B40;
-}
-
-img{
-width: 100%;
-}
-
 #errormsg{
     border-radius: 20px;
     background: #E8D0D1;

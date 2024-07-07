@@ -12,12 +12,11 @@
                 *ngIf="submitted && (loginForm.controls.username.invalid || loginForm.controls.password.invalid)"
                 >
                 <div
-                *ngIf="loginForm.controls.username.errors?.['required']
-                || loginForm.controls.password.errors?.['required'] || loginForm.controls.password.errors?.['minlength']">
+                *ngIf="showErrorMessage">
                     Please enter a correct national ID/password
                 </div>
                 <div
-                *ngIf="loginForm.controls.username.errors?.['minlength'] || loginForm.controls.username.errors?.['maxlength']">
+                *ngIf="showErrorMessage2">
                     Username should be 10 numbers.
                 </div>
             </div> 
@@ -36,12 +35,12 @@
 
                 <br><br> 
                 
-                <button class="col-12 mx-auto custom-input btn btn-primary border-0" type="submit">Sign in</button>
+                 <buttons></buttons>
             </form>
         </div>
     </section>
 
     <section class="container-fluid" id="right">
-        <img alt="TAHAKOM logo" src="assets/images/TahakomLogo.png">
+        <img class="w-100" alt="TAHAKOM logo" src="assets/images/TahakomLogo.png">
     </section>
 </div>

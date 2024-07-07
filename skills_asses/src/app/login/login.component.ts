@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { Validators } from "@angular/forms";
 import { Router } from '@angular/router';
-
+import { ROUTES } from '@app/app.constants';
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
+
 export class LoginComponent {
   imageUrl = 'assets/images/TahakomLogo.png';
   title = 'Login';
@@ -30,7 +31,16 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);
       this.submitted = false;
-      this.router.navigate(['/home']);
+      this.router.navigate([ROUTES.HOME]);
     }
+  }
+
+  get showErrorMessage(): boolean {
+    return this.loginForm.controls.username.errors?.['required']
+   || this.loginForm.controls.password.errors?.['required'] || this.loginForm.controls.password.errors?.['minlength']
+  }
+
+  get showErrorMessage2(): boolean {
+    return this.loginForm.controls.username.errors?.['minlength'] || this.loginForm.controls.username.errors?.['maxlength']
   }
 }
