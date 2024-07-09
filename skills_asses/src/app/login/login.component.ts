@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from "@angular/forms";
 import { Validators } from "@angular/forms";
 import { Router } from '@angular/router';
-import { ROUTES } from '@app/app.constants';
+import { ROUTES } from '../app.constants';
 
 @Component({
   selector: 'login',

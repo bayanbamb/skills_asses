@@ -1,0 +1,15 @@
+{
+  "ERROR_MSG1": "Please enter a correct national ID/password",
+  "ERROR_MSG2": "Username should be 10 numbers.",
+  "FORGOT_PASS": "Forgot password.",
+  "HOME_PAGE": "Home page",
+  "LOGIN": "LOGIN",
+  "PASSWORD": "Password",
+  "REMEMBER": "Remember me",
+  "REQ_MSG": "Please enter your credintials",
+  "SIGNIN": "Sign In",
+  "SWITCH_LANGUAGE": "arabic",
+  "USERNAME": "Username",
+  "USERNAME_PLACEHOLDER": "Enter your username",
+  "WELCOME": "welcome Bayan"
+}
