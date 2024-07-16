@@ -1,0 +1,47 @@
+
+<div id="container">
+    <section class="container-fluid" id="left">
+        <div id="login">
+            <div id="title">
+                <switch></switch>
+                <h1>{{ 'LOGIN' | translate }}</h1>
+                <p>
+                    {{ 'REQ_MSG' | translate }}
+                </p>
+            </div>
+            <div id ="errormsg"
+                *ngIf="submitted && (loginForm.controls.username.invalid || loginForm.controls.password.invalid)"
+                >
+                <div
+                *ngIf="showErrorMessage">
+                {{ 'ERROR_MSG1' | translate }}
+                </div>
+                <div
+                *ngIf="showErrorMessage2">
+                {{ 'ERROR_MSG2' | translate }}
+                </div>
+            </div> 
+            <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <label for="username">{{ 'USERNAME' | translate }}</label>
+                <input class="mb-3 custom-input form-control" id="username" type="text" formControlName="username" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate}}" [ngClass]="{'is-invalid': loginForm.controls.username.touched && loginForm.controls.username.invalid}">
+
+                <label for="password">{{ 'PASSWORD' | translate }}</label>
+                <input class="mb-3 custom-input form-control" id="password" type="password" formControlName="password" placeholder="********">
+                
+                <small>
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="ms-2 form-check-label" for="rememberMe">{{ 'REMEMBER' | translate}}</label>
+                <a href="#" id="forgotpassword" class="ms-5 float-start">{{ 'FORGOT_PASS' | translate}}</a>
+                </small>
+
+                <br><br> 
+                
+                 <buttons></buttons>
+            </form>
+        </div>
+    </section>
+
+    <section class="container-fluid" id="right">
+        <img class="w-100" alt="TAHAKOM logo" src="assets/images/TahakomLogo.png">
+    </section>
+</div>

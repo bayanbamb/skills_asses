@@ -1,0 +1,12 @@
+{
+  "translationFiles": [
+    {
+      "lang": "en",
+      "uri": "skills_asses/src/assets/i18n/en.json"
+    },
+    {
+      "lang": "ar",
+      "uri": "skills_asses/src/assets/i18n/ar.json"
+    }
+  ]
+}

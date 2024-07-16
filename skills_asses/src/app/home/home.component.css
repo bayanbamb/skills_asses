@@ -1,0 +1,32 @@
+header{
+    background: linear-gradient(90deg, #35142C 0%, #612550 25%, #497284 75%);
+    padding: 0 3% 0 0;
+}
+
+body{
+    display:flex;
+    height: 100vh;
+    background: #F8F8F8;
+
+}
+
+img{
+    width: 7%;
+    margin: 0%;
+}
+
+div{
+    margin: auto;
+    width: 95%;
+    height: 75%;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+div p{
+    padding: 2%;
+}
+
+section{
+    color: #ffffff;
+}

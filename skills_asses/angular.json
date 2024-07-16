@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "skills_asses": {
+    "skill_assess": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,20 +23,22 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/skills_asses",
+            "outputPath": "dist/skill_assess",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets",
+              "src/assets/images",
+              "src/assets/i18n"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -74,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "skills_asses:build:production"
+              "buildTarget": "skill_assess:build:production"
             },
             "development": {
-              "buildTarget": "skills_asses:build:development"
+              "buildTarget": "skill_assess:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,14 +92,13 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets",
+              "src/assets/images"
             ],
             "styles": [
               "src/styles.css"
@@ -107,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fcd347ad-5b8b-4e19-8bd1-8bdd056b10f3"
   }
 }

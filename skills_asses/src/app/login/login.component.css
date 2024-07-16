@@ -1,0 +1,69 @@
+#container{
+    display:flex;
+    height: 100vh;
+}
+
+#left{
+    width:50%;
+    background-color: #F8F8F8;
+}
+
+#right{
+    background: linear-gradient(180deg, #35142C 0%, #612550 25%, #497284 75%, #31BFB7 100%);
+    width:50%;
+}
+
+#login{
+    padding: 25% 0% 25% 0%;
+}
+
+form{
+    width: 50%;
+    margin: auto;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+#title, #errormsg{
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    color: #030303;
+}
+
+p{
+    color: #636364
+}
+
+.custom-input{
+    border-radius: 12px;
+    box-shadow: 0px .3px .3px 0px #00000040;
+}
+
+#errormsg{
+    border-radius: 20px;
+    background: #E8D0D1;
+    border: 1px solid #9A0B11;
+    width: 50%;
+    box-shadow: 0px 4px 10px 0px #E9444B40;
+    margin-bottom: 1%;
+}
+
+#errormsg div{
+    color: #9A0B11;
+    text-align: center;
+    font-size: 70%;
+    margin: 2% 3% 2% 3%;
+}
+
+#forgotpassword{
+left: -10%;
+text-decoration: none;
+color: #030303;
+}
+
+.is-invalid {
+border-color: #dc3545;
+}
